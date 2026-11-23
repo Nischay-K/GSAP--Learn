@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#070a10">
+    <title>Elastic Line — GSAP Motion Study</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="stage">
+        <div class="stage-content">
+            <p class="eyebrow"><span class="status-dot"></span> GSAP / INTERACTIVE STUDY 01</p>
+            <h1>Make it <span>move.</span></h1>
+            <p class="instruction">Move or drag across the line. Release to watch it snap back.</p>
+
+            <div id="string">
+                <svg viewBox="0 0 1000 240" preserveAspectRatio="none" role="img"
+                    aria-label="Interactive elastic line. Move or drag to bend it.">
+                    <defs>
+                        <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#75f7df" />
+                            <stop offset="50%" stop-color="#91a9ff" />
+                            <stop offset="100%" stop-color="#d09aff" />
+                        </linearGradient>
+                    </defs>
+                    <path class="line-rail" d="M 0 120 Q 500 120 1000 120" />
+                    <path class="line-glow interactive-line" d="M 0 120 Q 500 120 1000 120" />
+                    <path class="line-main interactive-line" d="M 0 120 Q 500 120 1000 120" />
+                </svg>
+            </div>
+
+            <div class="hints" aria-hidden="true">
+                <span>↔ MOVE TO BEND</span>
+                <span>↵ RELEASE TO RESET</span>
+            </div>
+            <p class="signature">A LITTLE FORCE. A LOT OF FEEL.</p>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.1/gsap.min.js" integrity="sha512-VMHB/Dy1/3d+djJPdMhxbplbZgbfPNHy+yWCxB1MSrwUEcNE+gnviL/DwlGsh9wwobnRTiQc6ChK2ZoJamshXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
