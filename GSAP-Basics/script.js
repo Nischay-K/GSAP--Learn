@@ -42,15 +42,15 @@
 
 // Timeline concepts -> here we need to make it synchronous type so that after one move the other more with respect to the first element!!
 
-var tl = gsap.timeline()
+// var tl = gsap.timeline()
 // With the timeline 
-tl.to("#box" , {            
-    x : 1500,                  
-    duration : 1.5,            
-    backgroundColor : "yellow",
-    borderRadius : "50%",      
-    delay : 1                
-})                             
+// tl.to("#box" , {            
+    // x : 1500,                  
+    // duration : 1.5,            
+    // backgroundColor : "yellow",
+    // borderRadius : "50%",      
+    // delay : 1                
+// })                             
 
 // Without timeline
 // gsap.to("#box" , {
@@ -61,13 +61,13 @@ tl.to("#box" , {
 // })
 
 // With timeline
-tl.to("#box2" , {            
-    x : 1500,                  
-    duration : 1.5,            
-    backgroundColor : "yellow",
-    borderRadius : "50%",      
+// tl.to("#box2" , {            
+    // x : 1500,                  
+    // duration : 1.5,            
+    // backgroundColor : "yellow",
+    // borderRadius : "50%",      
     // delay : 2.5       No need of delay while using the timelines         
-})                             
+// })                             
 
 // Without timeline
 // gsap.to("#box2" , {
@@ -79,14 +79,14 @@ tl.to("#box2" , {
 // })
 
 // With timeline
-tl.to("#box3" , {            
-    x : 1500,                  
-    duration : 1.5,            
-    backgroundColor : "yellow",
-    borderRadius : "50%",      
+// tl.to("#box3" , {            
+    // x : 1500,                  
+    // duration : 1.5,            
+    // backgroundColor : "yellow",
+    // borderRadius : "50%",      
     // delay : 2.5                
-})                             
-
+// })                             
+// 
 // Without Timeline
 // gsap.to("#box3" , {            
     // x : 1500,                  
@@ -95,28 +95,60 @@ tl.to("#box3" , {
     // borderRadius : "50%",      
     // delay : 4                
 // })                             
-
-var til = gsap.timeline()
-
-til.from("h2" , {
-    y : -20,
-    opacity : 0,
-    duration : 2,
-    delay : 0.5
-})
-
-til.from("h4" , {
-    y : -20,
-    opacity : 0,
-    duration : 2,
+// 
+// var til = gsap.timeline()
+// 
+// til.from("h2" , {
+    // y : -20,
+    // opacity : 0,
+    // duration : 2,
     // delay : 0.5
-    stagger : 0.6
-})
-
-til.from("h1" , {
-    y : -20,
-    opacity : 0,
-    duration : 2,
+// })
+// 
+// til.from("h4" , {
+    // y : -20,
+    // opacity : 0,
+    // duration : 2,
     // delay : 0.5
-    scale : 0.2
-})
+    // stagger : 0.6
+// })
+// 
+// til.from("h1" , {
+    // y : -20,
+    // opacity : 0,
+    // duration : 2,
+    // delay : 0.5
+    // scale : 0.2
+// })
+// 
+
+// Scroll Trigger -> Concept
+// Important things!!!
+
+gsap.registerPlugin(ScrollTrigger);
+
+const heading = document.querySelector("#page2 h1");
+const getTravelDistance = () => Math.max(0, heading.scrollWidth - window.innerWidth);
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    gsap.fromTo(heading, {
+        x: 0,
+        y: 30,
+        opacity: 0.4,
+        scale: 0.97
+    }, {
+        x: () => -getTravelDistance(),
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        ease: "none",
+        scrollTrigger: {
+            trigger: "#page2",
+            start: "top top",
+            end: () => `+=${getTravelDistance() * 0.75}`,
+            scrub: 1,
+            pin: true,
+            invalidateOnRefresh: true
+        }
+    });
+}
