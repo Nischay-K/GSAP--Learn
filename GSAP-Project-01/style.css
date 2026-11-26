@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "JetBrains Mono", monospace;
+}
+
+html , body {              
+    height: 100%;          
+    width: 100%;           
+    background-color: #000;
+}      
+
+body {
+    overflow-x: hidden;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-image: url(https://media.istockphoto.com/id/1497379890/photo/blue-sky-in-summer-sunlight-sunny-day.webp?s=1024x1024&w=is&k=20&c=c8Pa2QZTV0d_KfOdvGw0C12uxRGuAdWxu7kvkfmb250=);
+    background-size: cover;
+    background-position: center;
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 50px;
+    color: whitesmoke;
+}
+
+#nav h2 {
+    font-size: 30px;
+}
+
+#nav i {
+    font-size: 30px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#full {
+    height: 100%;
+    width: 40%;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.183);
+    top: 0;
+    right: -40%;
+    /* filter: blur(30px); */
+    backdrop-filter: blur(10px);
+    padding: 100px 60px;
+}
+
+#full h4 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#full i {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+}
