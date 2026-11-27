@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive GSAP experiments in kinetic typography, SVG motion, and pointer-driven image interactions.">
+    <title>Nischay | Motion and Interaction</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="scroll-progress" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <span></span>
+    </div>
+    <main>
+        <section class="feature" aria-labelledby="feature-title">
+            <header class="topbar">
+                <a class="wordmark" href="#top">NISCHAY<span> / WORK</span></a>
+                <nav class="site-nav" aria-label="Main navigation">
+                    <a href="#selected-work">WORK</a>
+                    <a href="#about">ABOUT</a>
+                    <span>INDEPENDENT MOTION STUDY / 2026</span>
+                </nav>
+            </header>
+
+            <div class="feature-grid" id="top">
+                <div class="project-copy">
+                    <p class="eyebrow"><span>01</span> FEATURED PROJECT</p>
+                    <h1 id="feature-title">Ideas<br>in <em>motion.</em></h1>
+                    <p class="project-description">A small study in kinetic type, rhythm, and interaction - built with GSAP.</p>
+                    <a class="project-link" href="#project-details">
+                        Explore the study
+                        <span aria-hidden="true">&gt;</span>
+                    </a>
+                </div>
+
+                <a class="project-art" href="#project-details" aria-label="Explore the kinetic typography study">
+                    <div class="art-topline">
+                        <span>GSAP / EXPERIMENT 01</span>
+                        <span>SCROLL TO EXPLORE</span>
+                    </div>
+                    <div class="art-orbit" aria-hidden="true"></div>
+                    <h2 class="art-title">
+                        <span>THRIVE</span>
+                        <span>BEYOND</span>
+                        <span>LIMITS</span>
+                    </h2>
+                    <div class="art-bottomline">
+                        <span>TYPE / MOTION / INTERACTION</span>
+                        <span>01 / 01</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="feature-footer">
+                <span>SELECTED WORK</span>
+                <span>SCROLL TO DISCOVER <span class="footer-arrow" aria-hidden="true">v</span></span>
+            </div>
+        </section>
+
+        <section class="project-details" id="project-details" aria-labelledby="details-title">
+            <p class="eyebrow">THE IDEA / 01</p>
+            <h2 id="details-title">MAKE EVERY<br><span>FRAME COUNT.</span></h2>
+            <p class="details-copy">A focused exploration of animated typography, continuous movement, and carefully timed reveals - turning one simple message into a living visual.</p>
+            <div class="project-facts">
+                <p><span>DISCIPLINE</span>KINETIC TYPE</p>
+                <p><span>TOOLS</span>GSAP / JAVASCRIPT</p>
+                <p><span>FOCUS</span>SCROLL MOTION</p>
+            </div>
+            <a class="back-link" href="#top">BACK TO THE FEATURE <span aria-hidden="true">^</span></a>
+        </section>
+
+        <section class="selected-work" id="selected-work" aria-labelledby="work-title">
+            <header class="section-heading">
+                <div>
+                    <p class="eyebrow">SELECTED WORK / 02 EXPERIMENTS</p>
+                    <h2 id="work-title">PLAYFUL BY<br><span>DESIGN.</span></h2>
+                </div>
+                <p class="section-intro">Small, hands-on studies in motion and interaction. Open each one to try it yourself.</p>
+            </header>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <a class="project-preview" href="../GSAP-Advanced-01/index.html" aria-label="Open the Elastic Line live demo">
+                        <img src="assets/elastic-line.png" alt="Elastic Line interactive SVG study" loading="lazy">
+                        <span class="preview-cta">TRY IT LIVE <span aria-hidden="true">-&gt;</span></span>
+                    </a>
+                    <p class="project-label">01 / INTERACTIVE SVG</p>
+                    <h3>Elastic Line</h3>
+                    <p class="card-description">Bend a glowing SVG curve with your pointer or touch, then release it to snap back with an elastic ease.</p>
+                    <ul class="tech-list" aria-label="Technologies used">
+                        <li>GSAP</li>
+                        <li>SVG</li>
+                        <li>POINTER EVENTS</li>
+                    </ul>
+                    <div class="project-actions">
+                        <a href="../GSAP-Advanced-01/index.html">LIVE DEMO <span aria-hidden="true">-&gt;</span></a>
+                        <a href="https://github.com/Nischay-K/GSAP--Learn/tree/main/GSAP-Advanced-01" target="_blank" rel="noopener noreferrer">SOURCE CODE <span aria-hidden="true">+</span></a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <a class="project-preview" href="../GSAP-Advanced-02/index.html" aria-label="Open the Image Spotlight live demo">
+                        <img src="assets/image-spotlight.png" alt="Image Spotlight pointer-following light effect" loading="lazy">
+                        <span class="preview-cta">TRY IT LIVE <span aria-hidden="true">-&gt;</span></span>
+                    </a>
+                    <p class="project-label">02 / POINTER INTERACTION</p>
+                    <h3>Image Spotlight</h3>
+                    <p class="card-description">A moving light follows the pointer across the image while a custom cursor and subtle 3D tilt respond to movement.</p>
+                    <ul class="tech-list" aria-label="Technologies used">
+                        <li>GSAP</li>
+                        <li>CSS GRADIENTS</li>
+                        <li>3D TRANSFORMS</li>
+                    </ul>
+                    <div class="project-actions">
+                        <a href="../GSAP-Advanced-02/index.html">LIVE DEMO <span aria-hidden="true">-&gt;</span></a>
+                        <a href="https://github.com/Nischay-K/GSAP--Learn/tree/main/GSAP-Advanced-02" target="_blank" rel="noopener noreferrer">SOURCE CODE <span aria-hidden="true">+</span></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="about" id="about" aria-labelledby="about-title">
+            <p class="eyebrow">ABOUT THIS COLLECTION</p>
+            <h2 id="about-title">MADE TO<br><span>MOVE.</span></h2>
+            <div class="about-copy">
+                <p>This collection brings together hands-on experiments with GSAP and JavaScript - from elastic SVG motion to pointer-driven image interactions.</p>
+                <a class="contact-link" href="https://github.com/Nischay-K" target="_blank" rel="noopener noreferrer">
+                    CONNECT ON GITHUB <span aria-hidden="true">-&gt;</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span>NISCHAY / MOTION STUDIES</span>
+        <a href="#top">BACK TO TOP <span aria-hidden="true">^</span></a>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.1/gsap.min.js" integrity="sha512-VMHB/Dy1/3d+djJPdMhxbplbZgbfPNHy+yWCxB1MSrwUEcNE+gnviL/DwlGsh9wwobnRTiQc6ChK2ZoJamshXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
